@@ -25,6 +25,9 @@ async function run(){
     const cursor = servicesCollection.find({});
     const services = await cursor.toArray();
     res.send(services);
+  });
+  app.get('/hello', (req,res)=>{
+    res.send('Hello updated here')
   })
   
   // POST API
